@@ -1,6 +1,6 @@
 # CaptionFusionator
 
-This project is intended to provide a framework for using multiple image-to-text models and then synthesizing them together into a single caption using a downstream LLM. As it stands, default values assume the user has a Nvidia GPU with at least 24GB of VRAM.
+This project is intended to provide a modular framework for using multiple image-to-text models and then synthesizing them together into a single caption using a downstream LLM. As it stands, default values assume the user has a Nvidia GPU with at least 24GB of VRAM.
 
 ## Components
 
