@@ -7,13 +7,14 @@ This project is intended to provide a framework for using multiple image-to-text
 The system includes the following components:
 
 #### 1. caption_blip2.py
-This script generates captions for a collection of images using the **BLIP2** model. It outputs the captions in separate files with a '.b2cap' extension. 
+This script generates captions for a collection of images using **BLIP2**. The captions are saved in separate files with a '.b2cap' extension.
+
 
 #### 2. caption_flamingo.py
-This script uses the **Open Flamingo** model to generate captions. The model is designed for image captioning and text-to-image synthesis. The captions are saved in separate files with a '.flamcap' extension.
+This script uses the **Open Flamingo** model to generate captions. The captions are saved in separate files with a '.flamcap' extension.
 
 #### 3. caption_wd14.py
-This script generates tags for images using pre-trained models from **Hugging Face's model hub**. The results can be filtered and are saved in files with a specified output extension.
+This script generates tags for images using pre-trained wd14 models. By default, captions are saved in the image input directory with the .wd14cap extension 
 
 #### 4. summarize_with_llama.py
 This script attempts to combine captions/tags using a llama derived model
@@ -117,6 +118,7 @@ This project is in active development, and generally should be considered in a p
 - [ ] Create .bat counterparts to setup.sh & run.sh for Windows
 - [ ] Possibly think of a better name
 - [ ] Set better defaults to current modules (which currently are ... mostly random)
+- [ ] set default models based on user-defined VRAM value
 - [ ] Possibly think of a better name
 - [ ] Figure out why llama.cpp wont use the GPU
 - [ ] Add MiniGPT4-Batch module
