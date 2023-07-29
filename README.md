@@ -94,7 +94,7 @@ You can run this project by executing the `run.sh` script with your desired opti
 
 ```bash
 ./run.sh --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --summarize_with_gpt
-
+```
 ## TO-DO
 
 This project is in active development, and generally should be considered in a pre-release state. The following items are currently outstanding (in no particular order)
