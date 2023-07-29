@@ -9,14 +9,14 @@ This project is in active development, and generally should be considered in a p
 The system includes the following components:
 
 #### 1. caption_blip2.py
-This script generates captions for a collection of images using **BLIP2**. The captions are saved in separate files with a '.b2cap' extension.
+This script generates captions for a collection of images using **BLIP2**. By default, the captions are saved in separate files in the image input directory with a '.b2cap' extension.
 
 
 #### 2. caption_flamingo.py
-This script uses  **Open Flamingo** to generate captions. The captions are saved in separate files with a '.flamcap' extension.
+This script uses  **Open Flamingo** to generate captions. By default, the captions are saved in separate files in the image input directory with a '.flamcap' extension.
 
 #### 3. caption_wd14.py
-This script generates tags for images using pre-trained wd14 models. By default, captions are saved in the image input directory with the .wd14cap extension 
+This script generates tags for images using pre-trained wd14 models. By default, captions are saved in the image input directory with a '.wd14cap' extension 
 
 #### 4. summarize_with_llama.py
 This script attempts to combine captions/tags using a llama derived model
