@@ -2,6 +2,8 @@
 
 This project is intended to provide a modular framework for using multiple image-to-text models and then synthesizing them together into a single caption using a downstream LLM. As it stands, default values assume the user has a Nvidia GPU with at least 24GB of VRAM.
 
+This project is in active development, and generally should be considered in a pre-release state.
+
 ## Components
 
 The system includes the following components:
@@ -111,8 +113,7 @@ You can run this project by executing the `run.sh` script with your desired opti
 ./run.sh --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --wd14_stack_models --summarize_with_gpt
 ```
 ## TO-DO
-
-This project is in active development, and generally should be considered in a pre-release state. The following items are currently outstanding (in no particular order)
+(in no particular order)
 
 - [ ] Further flesh out Readme.md
 - [ ] Create .bat counterparts to setup.sh & run.sh for Windows
