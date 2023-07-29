@@ -119,7 +119,6 @@ This project is in active development, and generally should be considered in a p
 - [ ] Possibly think of a better name
 - [ ] Set better defaults to current modules (which currently are ... mostly random)
 - [ ] set default models based on user-defined VRAM value
-- [ ] Possibly think of a better name
 - [ ] Figure out why llama.cpp wont use the GPU
 - [ ] Add MiniGPT4-Batch module
 - [ ] Add GIT (i.e. generative image to text) Module
