@@ -85,7 +85,7 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_openai_api_key`: Value of a valid OpenAI API key. Not needed if the OPENAI_API_KEY env variable is set.
 - `--summarize_llama_max_tokens`: Maximum number of tokens to use for Llama summarization. Set this value to control the length of the generated summary.
 - `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Higher values (e.g., 1.0) make the output more random, while lower values (e.g., 0.2) make it more focused and deterministic.
-- `--summarize_llama_model_repo_id`: Huggingface Repository ID or name of the Llama model to use for summarization.
+- `--summarize_llama_model_repo_id`: Huggingface Repository ID of the Llama model to use for summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`.
 - `--summarize_llama_model_filename`: Filename of the specific model to be used for Llama summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`.
 - `--summarize_llama_prompt_filepath`: Path to a prompt file that provides additional context for Llama summarization. If you need to guide the summarization process with specific instructions or prompts, provide the path to the file containing those prompts here.
 
