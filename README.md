@@ -1,6 +1,6 @@
 # CaptionFusionator
 
-This project is intended to provide a framework for using multiple image-to-text models and then synthesizing them together using  a LLM
+This project is intended to provide a framework for using multiple image-to-text models and then synthesizing them together into a single caption using a downstream LLM
 
 ## Components
 
