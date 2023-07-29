@@ -9,19 +9,22 @@ The system includes the following components:
 ### 1. caption_blip2.py
 This script generates captions for a collection of images using the **BLIP2** model. It outputs the captions in separate files with a '.b2cap' extension. 
 
-### 2. caption_flamingo.py
+#### 2. caption_flamingo.py
 This script uses the **Open Flamingo** model to generate captions. The model is designed for image captioning and text-to-image synthesis. The captions are saved in separate files with a '.flamcap' extension.
 
-### 3. caption_wd14.py
+#### 3. caption_wd14.py
 This script generates tags for images using pre-trained models from **Hugging Face's model hub**. The results can be filtered and are saved in files with a specified output extension.
 
-### 4. summarize_with_llama.py
-This script processes image captions using the **Llama model from HuggingFace**. It generates a prompt for each image and its captions in a chat format, which is then fed to the Llama model for a response. 
+#### 4. summarize_with_llama.py
+This script attempts to combine captions/tags using a llama derived model
 
-### 5. setup.sh
+#### 5. summarize_with_gpt.py
+This script attempts to combine captions/tags using one of OpenAI's GPT models
+
+#### 6. setup.sh
 This script creates a venv and installs the requirements for each module
 
-### 6. run.sh (control script)
+#### 7. run.sh (control script)
 This script serves as a control center, enabling the user to choose which tasks to perform by providing different command-line options. 
 
 ## Command Line Options
@@ -86,7 +89,18 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_llama_prompt_filepath`: Path to a prompt file that provides additional context for Llama summarization. If you need to guide the summarization process with specific instructions or prompts, provide the path to the file containing those prompts here.
 
 ## Installation
-Running the setup.sh script will create venvs for each module and install their requirements
+
+```bash
+git clone https://github.com/jbmiller10/CaptionFusionator.git
+```
+```bash
+cd CaptionFusionator
+```
+```bash
+chmod +x setup.sh
+chmod +x run.sh
+./setup.sh
+```
 
 ## Example Usage
 
