@@ -108,7 +108,7 @@ chmod +x run.sh
 You can run this project by executing the `run.sh` script with your desired options. Here's an example command that utilizes multiple models and summarizes with GPT:
 
 ```bash
-./run.sh --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --summarize_with_gpt
+./run.sh --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --wd14_stack_models --summarize_with_gpt
 ```
 ## TO-DO
 
