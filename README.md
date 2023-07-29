@@ -11,7 +11,7 @@ This script generates captions for a collection of images using **BLIP2**. The c
 
 
 #### 2. caption_flamingo.py
-This script uses the **Open Flamingo** model to generate captions. The captions are saved in separate files with a '.flamcap' extension.
+This script uses  **Open Flamingo** to generate captions. The captions are saved in separate files with a '.flamcap' extension.
 
 #### 3. caption_wd14.py
 This script generates tags for images using pre-trained wd14 models. By default, captions are saved in the image input directory with the .wd14cap extension 
