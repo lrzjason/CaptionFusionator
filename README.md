@@ -120,7 +120,7 @@ This project is in active development, and generally should be considered in a p
 - [ ] Possibly think of a better name
 - [ ] Figure out why llama.cpp wont use the GPU
 - [ ] Add MiniGPT4-Batch module
-- [ ] Add git Module
+- [ ] Add GIT (i.e. generative image to text) Module
 - [ ] Add Deepface Module
 - [ ] Add Described Module
 - [ ] General cleanup of existing modules' code
