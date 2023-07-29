@@ -1,6 +1,6 @@
 # CaptionFusionator
 
-This project is intended to provide a modular framework for using multiple image-to-text models and then synthesizing them together into a single caption using a downstream LLM. As it stands, default values assume the user has a Nvidia GPU with at least 24GB of VRAM.
+This project is intended to provide a modular framework for using multiple pre-trained image-to-text deep-learning models and then synthesizing them together into a single caption using a downstream LLM. As it stands, default values assume the user has a Nvidia GPU with at least 24GB of VRAM.
 
 This project is in active development, and generally should be considered in a pre-release state.
 
@@ -56,10 +56,10 @@ This project provides a wide range of options for you to customize its behavior.
 
 - `--blip2_model`: BLIP2 model to use for generating captions. Default: 'blip2_opt/caption_coco_opt6.7b'
 - `--blip2_use_nucleus_sampling`: Whether to use nucleus sampling when generating blip2 captions. Default: False
-- `--blip2_beams`: Number of beams to use for blip2 captioning. More beams may be more accurate, but are slower and use more VRAM.
+- `--blip2_beams`: Number of beams to use for blip2 captioning. More beams may be more accurate, but are slower and use more VRAM. Default: 6
 - `--blip2_max_tokens`: max_tokens value to be passed to blip2 model. Default: 75
 - `--blip2_min_tokens`: min_tokens value to be passed to blip2 model. Default: 20
-- `--blip2_top_p`: top_p value to be passed to blip2 model. Default: 1
+- `--blip2_top_p`: top_p value to be passed to blip2 model. Default: 1.0
 - `--blip2_output_extension`: File extension that blip2 captions will be saved with. Default: 'b2cap'
 
 #### Open Flamingo Model Options
@@ -73,8 +73,8 @@ This project provides a wide range of options for you to customize its behavior.
 - `--flamingo_temperature`: value to be passed to Open Flamingo model. Default: 1.0
 - `--flamingo_top_k`: top_k value to be passed to Open Flamingo model. Default: 0
 - `--flamingo_top_p`: top_p value to be passed to Open Flamingo model. Default: 1.0
-- `--flamingo_repetition_penalty`: Repetition penalty value to be passed to Open Flamingo model. Default: 1
-- `--flamingo_length_penalty`: Length penalty value to be passed to Open Flamingo model.
+- `--flamingo_repetition_penalty`: Repetition penalty value to be passed to Open Flamingo model. Default: 1.0
+- `--flamingo_length_penalty`: Length penalty value to be passed to Open Flamingo model. Default: 1.0
 - `--flamingo_output_extension`: File extension that Open Flamingo captions will be saved with. Default: 'flamcap'
 
 #### Summarization Options
@@ -85,11 +85,11 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_gpt_prompt_file_path`: File path to a TXT file containing the system prompt to be passed to GPT for summarizing your captions.
 - `--summarize_file_extensions`: The file extensions/captions you want to be passed to your summarize model. Defaults to values of Flamingo, BLIP2, and WD14 output extensions, e.g., ['wd14cap','flamcap','b2cap'].
 - `--summarize_openai_api_key`: Value of a valid OpenAI API key. Not needed if the OPENAI_API_KEY env variable is set.
-- `--summarize_llama_max_tokens`: Maximum number of tokens to use for Llama summarization. Set this value to control the length of the generated summary.
-- `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Higher values (e.g., 1.0) make the output more random, while lower values (e.g., 0.2) make it more focused and deterministic.
+- `--summarize_llama_max_tokens`: Maximum number of ouput tokens to use for Llama summarization. Default: 75
+- `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Default: 1.0
 - `--summarize_llama_model_repo_id`: Huggingface Repository ID of the Llama model to use for summarization. Must be set in conjunction with `--summarize_llama_model_filename`.
 - `--summarize_llama_model_filename`: Filename of the specific model to be used for Llama summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`.
-- `--summarize_llama_prompt_filepath`: Path to a prompt file that provides additional context for Llama summarization. If you need to guide the summarization process with specific instructions or prompts, provide the path to the file containing those prompts here.
+- `--summarize_llama_prompt_filepath`: Path to a prompt file that provides the system prompt for llama summarization
 
 ## Installation
 
