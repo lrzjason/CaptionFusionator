@@ -6,7 +6,7 @@ This project is intended to provide a framework for using multiple image-to-text
 
 The system includes the following components:
 
-### 1. caption_blip2.py
+#### 1. caption_blip2.py
 This script generates captions for a collection of images using the **BLIP2** model. It outputs the captions in separate files with a '.b2cap' extension. 
 
 #### 2. caption_flamingo.py
