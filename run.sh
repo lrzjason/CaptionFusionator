@@ -10,6 +10,30 @@ flamingo_output_extension="flamcap"
 summarize_file_extensions="${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}"
 # A variable to store user arguments
 user_args=""
+config_file=""
+
+for arg in "$@"
+do
+    if [[ $arg == "--use_config_file="* ]]; then
+        shift
+        config_file="$1"
+    fi
+done
+
+# If --use_config_file is set, read the config file
+if [[ -n "$config_file" ]]; then
+    while IFS= read -r line
+    do
+        # Checks if line is flagged as a comment
+        if [[ $line != \#* ]]; then
+            # Parses the line and sets the correct variable
+            varname="${line%=*}"
+            varvalue="${line#*=}"
+            declare $varname="$varvalue"
+        fi
+    done < "$config_file"
+fi
+
 
 # Parsing command line arguments
 while [[ "$#" -gt 0 ]]; do
