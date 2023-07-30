@@ -62,15 +62,15 @@ while [[ "$#" -gt 0 ]]; do
         echo "--summarize_llama_model_repo_id: Huggingface Repository ID or name of the llama model to use for summarization."
         echo "--summarize_llama_model_filename: filename of the specific model to be used for llama summarization. Must be set in conjunction with --summarize_llama_model_repo_id"
         echo "--summarize_llama_prompt_filepath: Path to a prompt file that provides additional context for llama summarization. If you need to guide the summarization process with specific instructions or prompts, provide the path to the file containing those prompts here."
-        echo "--summarize_llama_n_threads: number of cpu threads to run llama model on Default: 4
-        echo "--summarize_llama_n_batch: batch size to load llama model with Default:512
-        echo "--summarize_llama_n_gpu_layers: number of layers to offload to GPU Default: 55
-        echo "--summarize_llama_n_gqa: I honestly don't know, but it needs to be set to to 8 for 70B models Default: 8
+        echo "--summarize_llama_n_threads: number of cpu threads to run llama model on Default: 4"
+        echo "--summarize_llama_n_batch: batch size to load llama model with Default:512"
+        echo "--summarize_llama_n_gpu_layers: number of layers to offload to GPU Default: 55"
+        echo "--summarize_llama_n_gqa: I honestly don't know, but it needs to be set to to 8 for 70B models Default: 8"
         echo "--summarize_llama_max_tokens: Maximum number of tokens to use for llama summarization. Set this value to control the length of the generated summary."
         echo "--summarize_llama_temperature: Temperature value for controlling the randomness of llama summarization. Higher values (e.g., 1.0) make the output more random, while lower values (e.g., 0.2) make it more focused and deterministic."
-        echo "--summarize_llama_top_p : top_p value to run llama model with Default: 1.0
-        echo "--summarize_llama_frequency_penalty : frequency penalty value to run llama model with Default: 0
-        echo "--summarize_llama_top_p : presence penalty value to run llama model with Default: 0
+        echo "--summarize_llama_top_p : top_p value to run llama model with Default: 1.0"
+        echo "--summarize_llama_frequency_penalty : frequency penalty value to run llama model with Default: 0"
+        echo "--summarize_llama_top_p : presence penalty value to run llama model with Default: 0"
         exit 0
         ;;
         --use_blip2) use_blip2=true; user_args="${user_args} --use_blip2" ;;
