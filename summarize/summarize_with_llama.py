@@ -67,7 +67,7 @@ def main():
     parser.add_argument("--prompt_file_path", type=str,help="Path to txt file containing system prompt for the the model", default="llama_system_prompt.txt")
     parser.add_argument("--caption_exts", nargs='+', help="Extensions for caption files", default=["b2cap", "flamcap", "wd14cap"])
     parser.add_argument("--n_batch", type=int, default=512)
-    parser.add_argument("--num_threads", type=int, default=4)
+    parser.add_argument("--n_threads", type=int, default=4)
     parser.add_argument("--n_gpu_layers", type=int, default=55)
     parser.add_argument("--n_gqa", type=int, default=8)
     parser.add_argument("--max_tokens", type=int, help="Max tokens for the Llama model", default=75)
@@ -85,7 +85,7 @@ def main():
     hf_repo_id = args.hf_repo_id
     hf_filename = args.hf_filename
     caption_exts = args.caption_exts
-    num_threads = args.num_threads
+    n_threads = args.n_threads
     n_batch = args.n_batch
     n_gpu_layers = args.n_gpu_layers
     n_gqa = args.n_gqa
@@ -115,7 +115,7 @@ def main():
 
     os.chdir(output_directory)  # Change current working directory to output directory
 
-    process_images_and_captions(input_directory, prompt, caption_exts , hf_repo_id, hf_filename, num_threads, n_batch, n_gpu_layers, n_gqa, max_tokens, temperature, top_p, frequency_penalty, presence_penalty)
+    process_images_and_captions(input_directory, prompt, caption_exts , hf_repo_id, hf_filename, n_threads, n_batch, n_gpu_layers, n_gqa, max_tokens, temperature, top_p, frequency_penalty, presence_penalty)
 
 if __name__ == "__main__":
     main()
