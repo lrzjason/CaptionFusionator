@@ -96,7 +96,7 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Default: 1.0
 - `--summarize_llama_top_p`: top_p value to run llama model with Default: 1.0
 - `--summarize_llama_frequency_penalty`: frequency penalty value to run llama model with Default: 0
-- `--summarize_llama_top_presence penalty`: presence penalty value to run llama model with Default: 0
+- `--summarize_llama_top_presence_penalty`: presence penalty value to run llama model with Default: 0
   
 ## Installation
 
