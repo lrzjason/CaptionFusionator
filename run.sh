@@ -48,6 +48,7 @@ while [[ "$#" -gt 0 ]]; do
 #basic options
         echo "Usage: run.sh [OPTIONS]"
         echo "Options:"
+        echo "--use_config_file: absolute path to a config file containing arguments to be used. see example_config_file.txt"
         echo "--use_blip2: create blip2 captions of images in your input directory"
         echo "--use_open_flamingo: create open flamingo captions of images in your input directory"
         echo "--use_wd14: create wd14 tags for images in your input directory"
@@ -55,7 +56,6 @@ while [[ "$#" -gt 0 ]]; do
         echo "--summarize_with_llama: use a llama derived local model for combining/summarizing your caption files"        
         echo "--input_directory: absolute path to the directory containing the image files you wish to caption"
         echo "--output_directory: output directory for saving caption files. If not set, defaults to value passed to --input_directory"
-        echo "--use_config_file: absolute path to a config file containing arguments to be used. see example_config_file.txt in the project root"
 #wd14 options help
         echo "--wd14_stack_models: runs three wd14 models and takes the mean of their values Default: ['SmilingWolf/wd-v1-4-convnext-tagger-v2', 'SmilingWolf/wd-v1-4-vit-tagger-v2', 'SmilingWolf/wd-v1-4-swinv2-tagger-v2'] "
         echo "--wd14_model: if not stacking, which wd14 model to run Default: SmilingWolf/wd-v1-4-swinv2-tagger-v2"
