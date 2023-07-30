@@ -40,8 +40,8 @@ fi
 # Parsing command line arguments
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
-    --use_config_file=*) 
-        config_file="${1#*=}";  
+    --use_config_file) 
+        config_file="$2";  
         shift ;;
     --help)
 #basic options
