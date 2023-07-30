@@ -40,7 +40,9 @@ fi
 # Parsing command line arguments
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
-    --use_config_file=*) shift ;;
+    --use_config_file=*) 
+        config_file="${1#*=}";  
+        shift ;;
     --help)
 #basic options
         echo "Usage: run.sh [OPTIONS]"
