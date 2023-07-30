@@ -85,8 +85,8 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_gpt_prompt_file_path`: File path to a TXT file containing the system prompt to be passed to GPT for summarizing your captions.
 - `--summarize_file_extensions`: The file extensions/captions you want to be passed to your summarize model. Defaults to values of Flamingo, BLIP2, and WD14 output extensions, e.g., ['wd14cap','flamcap','b2cap'].
 - `--summarize_openai_api_key`: Value of a valid OpenAI API key. Not needed if the OPENAI_API_KEY env variable is set.
-- `--summarize_llama_model_repo_id`: Huggingface Repository ID of the Llama model to use for summarization. Must be set in conjunction with `--summarize_llama_model_filename`.
-- `--summarize_llama_model_filename`: Filename of the specific model to be used for Llama summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`.
+- `--summarize_llama_model_repo_id`: Huggingface Repository ID of the Llama model to use for summarization. Must be set in conjunction with `--summarize_llama_model_filename`. Default: TheBloke/StableBeluga2-70B-GGML
+- `--summarize_llama_model_filename`: Filename of the specific model to be used for Llama summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`. Default: stablebeluga2-70b.ggmlv3.q2_K.bin
 - `--summarize_llama_prompt_filepath`: Path to a prompt file that provides the system prompt for llama summarization
 - `--summarize_llama_n_threads`: number of cpu threads to run llama model on Default: 4
 - `--summarize_llama_n_batch`: batch size to load llama model with Default:512
