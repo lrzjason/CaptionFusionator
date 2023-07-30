@@ -36,7 +36,7 @@ This project provides a wide range of options for you to customize its behavior.
 
 #### Basic Options
 
-- `--use_config_file`: absolute path to a config file containing arguments to be used. see example_config_file.txt
+- `--use_config_file`: absolute path to a config file containing arguments to be used. If using both a config file & CLI arguments this must be the first argument passed. see example_config_file.txt
 - `--use_blip2`: Generate BLIP2 captions of images in your input directory.
 - `--use_open_flamingo`: Generate Open Flamingo captions of images in your input directory.
 - `--use_wd14`: Generate WD14 tags for images in your input directory.
