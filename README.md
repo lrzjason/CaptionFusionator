@@ -85,12 +85,19 @@ This project provides a wide range of options for you to customize its behavior.
 - `--summarize_gpt_prompt_file_path`: File path to a TXT file containing the system prompt to be passed to GPT for summarizing your captions.
 - `--summarize_file_extensions`: The file extensions/captions you want to be passed to your summarize model. Defaults to values of Flamingo, BLIP2, and WD14 output extensions, e.g., ['wd14cap','flamcap','b2cap'].
 - `--summarize_openai_api_key`: Value of a valid OpenAI API key. Not needed if the OPENAI_API_KEY env variable is set.
-- `--summarize_llama_max_tokens`: Maximum number of ouput tokens to use for Llama summarization. Default: 75
-- `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Default: 1.0
 - `--summarize_llama_model_repo_id`: Huggingface Repository ID of the Llama model to use for summarization. Must be set in conjunction with `--summarize_llama_model_filename`.
 - `--summarize_llama_model_filename`: Filename of the specific model to be used for Llama summarization. Must be set in conjunction with `--summarize_llama_model_repo_id`.
 - `--summarize_llama_prompt_filepath`: Path to a prompt file that provides the system prompt for llama summarization
-
+- `--summarize_llama_n_threads: number of cpu threads to run llama model on Default: 4
+- `--summarize_llama_n_batch: batch size to load llama model with Default:512
+- `--summarize_llama_n_gpu_layers: number of layers to offload to GPU Default: 55
+- `--summarize_llama_n_gqa: I honestly don't know, but it needs to be set to to 8 for 70B models Default: 8
+- `--summarize_llama_max_tokens`: Maximum number of ouput tokens to use for Llama summarization. Default: 75
+- `--summarize_llama_temperature`: Temperature value for controlling the randomness of Llama summarization. Default: 1.0
+- `--summarize_llama_top_p : top_p value to run llama model with Default: 1.0
+- `--summarize_llama_frequency_penalty : frequency penalty value to run llama model with Default: 0
+- `--summarize_llama_top_p : presence penalty value to run llama model with Default: 0
+  
 ## Installation
 
 ```bash
