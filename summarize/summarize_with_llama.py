@@ -40,7 +40,7 @@ def process_images_and_captions(directory, prompt, caption_exts,hf_repo_id, hf_f
 
         prompt_string += "\n### ASSISTANT: "
 
-        if caption_number > 1:
+        if caption_number >= 1:
             # Generate response using Llama model
             response = lcpp_llm(
                 prompt=prompt_string,
