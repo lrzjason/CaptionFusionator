@@ -7,7 +7,7 @@ base_directory="$(dirname "$(readlink -f "$0")")"
 wd14_output_extension="wd14cap"
 blip2_output_extension="b2cap"
 flamingo_output_extension="flamcap"
-summarize_file_extensions="${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}"
+summarize_file_extensions=("${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}")
 # A variable to store user arguments
 user_args=""
 config_file=""
@@ -15,8 +15,7 @@ config_file=""
 for arg in "$@"
 do
     if [[ $arg == "--use_config_file="* ]]; then
-        shift
-        config_file="$1"
+        config_file="${arg#*=}"
     fi
 done
 
