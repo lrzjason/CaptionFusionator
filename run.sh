@@ -7,9 +7,7 @@ base_directory="$(dirname "$(readlink -f "$0")")"
 wd14_output_extension="wd14cap"
 blip2_output_extension="b2cap"
 flamingo_output_extension="flamcap"
-summarize_file_extensions="['${wd14_output_extension}','${flamingo_output_extension}','${blip2_output_extension}']"
-
-echo ${summarize_file_extensions}
+summarize_file_extensions="${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}"
 # A variable to store user arguments
 user_args=""
 
@@ -72,6 +70,7 @@ while [[ "$#" -gt 0 ]]; do
         --use_open_flamingo) use_open_flamingo=true; user_args="${user_args} --use_open_flamingo" ;;
         --use_wd14) use_wd14=true; user_args="${user_args} --use_wd14" ;;
         --summarize_with_gpt) summarize_with_gpt=true; user_args="${user_args} --summarize_with_gpt" ;;
+        --summarize_with_llama) summarize_with_llama=true; user_args="${user_args} --summarize_with_llama" ;;
         --input_directory) input_directory="$2"; flamingo_img_dir="$2"; blip2_dir="$2"; user_args="${user_args} --input_directory=$2"; shift ;;
         --output_directory) output_directory="$2"; user_args="${user_args} --output_directory=$2"; shift ;;
         --wd14_stack_models) wd14_stack_models=true; user_args="${user_args} --wd14_stack_models" ;;
@@ -279,7 +278,6 @@ generate_summarize_with_llama_options() {
 if [[ "$summarize_with_llama" == "true" ]]; then
     source "$base_directory/summarize/venv_summarize/bin/activate"
     cd "$base_directory/summarize"
-    
     options=$(generate_summarize_with_llama_options)
     python3 summarize_with_llama.py $options
     
