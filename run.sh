@@ -12,10 +12,12 @@ summarize_file_extensions=("${wd14_output_extension}" "${flamingo_output_extensi
 user_args=""
 config_file=""
 
+# Parsing command line arguments for --use_config_file 
 for arg in "$@"
 do
     if [[ $arg == "--use_config_file="* ]]; then
         config_file="${arg#*=}"
+        break
     fi
 done
 
@@ -25,9 +27,10 @@ if [[ -n "$config_file" ]]; then
     do
         # Checks if line is flagged as a comment
         if [[ $line != \#* ]]; then
-            # Parses the line and sets the correct variable
+            # Parses the line
             varname="${line%=*}"
             varvalue="${line#*=}"
+            # Sets the correct variable
             declare $varname="$varvalue"
         fi
     done < "$config_file"
@@ -37,6 +40,7 @@ fi
 # Parsing command line arguments
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
+    --use_config_file=*) shift ;;
     --help)
 #basic options
         echo "Usage: run.sh [OPTIONS]"
