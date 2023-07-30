@@ -5,4 +5,4 @@ At times, you might find discrepancies among the captions and tags. When such co
 Your task is to synthesize these multiple pieces of information into a singular, coherent description of the image. Remember, your response should be a natural language description, not a narrative. Draw upon your analytical and comprehension skills to form a precise, descriptive caption.
 
 Reply only with your caption.
-******************************
+
