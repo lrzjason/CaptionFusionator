@@ -12,17 +12,18 @@ summarize_file_extensions=("${wd14_output_extension}" "${flamingo_output_extensi
 user_args=""
 config_file=""
 
-# Parsing command line arguments for --use_config_file 
 for arg in "$@"
 do
-    if [[ $arg == "--use_config_file="* ]]; then
-        config_file="${arg#*=}"
+    if [[ $arg == *"--use_config_file"* ]]; then
+        # config_file="${arg#*=}"
+        config_file="$2"
         break
     fi
 done
 
 # If --use_config_file is set, read the config file
-if [[ -n "$config_file" ]]; then
+if [ -n "$config_file" ]; then
+    echo "Loading options from config file $config_file"
     while IFS= read -r line
     do
         # Checks if line is flagged as a comment
