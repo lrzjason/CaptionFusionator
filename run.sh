@@ -7,17 +7,48 @@ base_directory="$(dirname "$(readlink -f "$0")")"
 wd14_output_extension="wd14cap"
 blip2_output_extension="b2cap"
 flamingo_output_extension="flamcap"
-summarize_file_extensions="${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}"
+summarize_file_extensions=("${wd14_output_extension}" "${flamingo_output_extension}" "${blip2_output_extension}")
 # A variable to store user arguments
 user_args=""
+config_file=""
+
+for arg in "$@"
+do
+    if [[ $arg == *"--use_config_file"* ]]; then
+        # config_file="${arg#*=}"
+        config_file="$2"
+        break
+    fi
+done
+
+# If --use_config_file is set, read the config file
+if [ -n "$config_file" ]; then
+    echo "Loading options from config file $config_file"
+    while IFS= read -r line
+    do
+        # Checks if line is flagged as a comment
+        if [[ $line != \#* ]]; then
+            # Parses the line
+            varname="${line%=*}"
+            varvalue="${line#*=}"
+            # Sets the correct variable
+            declare $varname="$varvalue"
+        fi
+    done < "$config_file"
+fi
+
 
 # Parsing command line arguments
 while [[ "$#" -gt 0 ]]; do
     case "$1" in
+    --use_config_file) 
+        config_file="$2";  
+        shift ;;
     --help)
 #basic options
         echo "Usage: run.sh [OPTIONS]"
         echo "Options:"
+        echo "--use_config_file: absolute path to a config file containing arguments to be used. see example_config_file.txt"
         echo "--use_blip2: create blip2 captions of images in your input directory"
         echo "--use_open_flamingo: create open flamingo captions of images in your input directory"
         echo "--use_wd14: create wd14 tags for images in your input directory"
