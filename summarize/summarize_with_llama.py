@@ -16,8 +16,8 @@ def process_images_and_captions(directory, prompt, caption_exts,hf_repo_id, hf_f
         n_threads=n_threads, 
         n_batch=n_batch,  # Should be between 1 and n_ctx
         n_gpu_layers=n_gpu_layers,  
-        n_gqa=n_gqa
-        #add n_ctx maybe?
+        n_gqa=n_gqa,
+        n_ctx=1024?
     )
 
     for image_file in image_files:
@@ -65,7 +65,7 @@ def main():
     parser.add_argument("--hf_filename", type=str, help="HF model filename",default="stablebeluga2-70b.ggmlv3.q2_K.bin") #just a random model for now
     #parser.add_argument("--model_path", type=str, help="path to llama model")
     parser.add_argument("--prompt_file_path", type=str,help="Path to txt file containing system prompt for the the model", default="llama_system_prompt.txt")
-    parser.add_argument("--caption_exts", nargs='+', help="Extensions for caption files", default=["b2cap", "flamcap", "wd14cap"])
+    parser.add_argument("--caption_exts", nargs='+', help="Extensions for caption files", default=["b2cap", "flamcap", "wd14cap","humcap"])
     parser.add_argument("--n_batch", type=int, default=512)
     parser.add_argument("--n_threads", type=int, default=4)
     parser.add_argument("--n_gpu_layers", type=int, default=55)
