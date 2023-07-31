@@ -123,16 +123,12 @@ You can run this project by executing the `run.sh` script with your desired opti
 ## TO-DO
 (in no particular order)
 
-- [ ] Further flesh out Readme.md
 - [ ] Create .bat counterparts to setup.sh & run.sh for Windows
-- [ ] Possibly think of a better name
-- [ ] Set better defaults to current modules (which currently are ... mostly random)
+- [ ] Set better defaults to current modules
 - [ ] set default models based on user-defined VRAM value
-- [ ] Figure out why llama.cpp wont use the GPU
 - [ ] Add MiniGPT4-Batch module
 - [ ] Add GIT (i.e. generative image to text) Module
 - [ ] Add Deepface Module
 - [ ] Add Described Module
-- [ ] General cleanup of existing modules' code
 
 ---
