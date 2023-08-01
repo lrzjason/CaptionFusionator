@@ -129,6 +129,7 @@ Linux
 ./run.sh --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --wd14_stack_models --summarize_with_llama
 ```
 
+You can run this project by executing the run.ps1 script with your desired options. Here's an example command that utilizes multiple models and summarizes with a llama derived model:
 Window
 ```bash
 ./run.ps1 --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --wd14_stack_models --summarize_with_llama
