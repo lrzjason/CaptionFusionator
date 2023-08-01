@@ -16,7 +16,8 @@ def process_images_and_captions(directory, prompt, caption_exts,hf_repo_id, hf_f
         n_threads=n_threads, 
         n_batch=n_batch,  # Should be between 1 and n_ctx
         n_gpu_layers=n_gpu_layers,  
-        n_gqa=n_gqa
+        n_gqa=n_gqa,
+        n_ctx=2048
         #add n_ctx maybe?
     )
 
