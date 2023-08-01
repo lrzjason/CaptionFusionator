@@ -15,4 +15,4 @@ blip2_min_tokens=20
 blip2_top_p=1.0
  
 #and so on
-input_directory=E:\Media\0AIpainting\0sdxl_lora\qianqian\image\qianqian_subset
+input_directory=path\to\input_directory
