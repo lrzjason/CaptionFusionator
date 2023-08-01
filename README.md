@@ -116,7 +116,7 @@ chmod +x run.sh
 ```
 
 Window
-```cmd
+```bash
 setup.bat
 ```
 
@@ -130,7 +130,7 @@ Linux
 ```
 
 Window
-```powershell
+```bash
 ./run.ps1 --use_config_file ./config_file.txt
 ```
 
