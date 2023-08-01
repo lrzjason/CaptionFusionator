@@ -114,7 +114,7 @@ if __name__ == '__main__':
     parser.add_argument("--model_repo_id", default=['SmilingWolf/wd-v1-4-swinv2-tagger-v2'], nargs='+', help="The model repo ids.")
     parser.add_argument("--threshold", type=float, default=0.5, help="wd14 tag confidence threshold")
     parser.add_argument("--output_extension", type=str, default="wd14cap", help="file extension to save caption with")
-    parser.add_argument("--filter", nargs='*', default=['1girl','solo','questionable','realistic'], help="List of tags to filter out.")
+    parser.add_argument("--filter", nargs='*', default=['1girl','solo','questionable','realistic','general','sensitive'], help="List of tags to filter out.")
     parser.add_argument("--stack_models", action='store_true', help="Whether to stack models. If set, images will be processed with multiple models and their scores averaged.")
     args = parser.parse_args()
 

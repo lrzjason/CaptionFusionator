@@ -160,7 +160,7 @@ if __name__ == "__main__":
                         help="Model name or path")
     parser.add_argument("--min_new_tokens", type=int, default=20, help="Minimum number of tokens to generate")
     parser.add_argument("--max_new_tokens", type=int, default=48, help="Maximum number of tokens to generate")
-    parser.add_argument("--num_beams", type=int, default=6, help="Number of beams for beam search")
+    parser.add_argument("--num_beams", type=int, default=10, help="Number of beams for beam search")
     parser.add_argument("--prompt", type=str, default="Output: ", help="Prompt to use for generation")
     parser.add_argument("--temperature", type=float, default=1.0, help="Temperature for sampling")
     parser.add_argument("--top_k", type=int, default=0, help="Top-k sampling")
