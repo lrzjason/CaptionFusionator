@@ -107,6 +107,8 @@ git clone https://github.com/jbmiller10/CaptionFusionator.git
 ```bash
 cd CaptionFusionator
 ```
+
+Linux
 ```bash
 chmod +x setup.sh
 chmod +x run.sh
