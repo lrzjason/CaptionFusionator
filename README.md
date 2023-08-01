@@ -131,6 +131,10 @@ Linux
 
 Window
 ```bash
+./run.ps1 --input_directory /path/to/your/image/dir --use_blip2 --use_open_flamingo --use_wd14 --wd14_stack_models --summarize_with_llama
+```
+Or
+```bash
 ./run.ps1 --use_config_file ./config_file.txt
 ```
 
